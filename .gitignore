@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Secrets / local config (the app needs none, keep it that way)
+.env
+.env.*
+*.pem
+*.key
+
+# Meeting recordings and audio/video (never commit)
+*.mov
+*.mp4
+*.m4a
+*.mp3
+*.wav
+*.mkv
+*.aiff
+*.aif
+*.flac
+*.ogg
+*.webm
+recordings/
+media/
+
+# Transcripts and other outputs (never commit)
+*_transcript.txt
+transcripts/
+output/
+outputs/
+
+# Downloaded Whisper models / caches
+models/
+.cache/
+huggingface/
+
+# Logs
+*.log

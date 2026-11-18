@@ -1,0 +1,14 @@
+#!/bin/bash
+APP_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
+SCRIPT="$APP_DIR/transcribe_app.py"
+
+if [ ! -f "$SCRIPT" ]; then
+  osascript -e "display alert \"transcribe_app.py not found\" message \"Expected it next to the .app at: $APP_DIR\""
+  exit 1
+fi
+
+# Use the Python that has faster-whisper installed
+PYTHON="/usr/bin/python3"
+export PYTHONPATH="$HOME/Library/Python/3.9/lib/python/site-packages:$PYTHONPATH"
+
+arch -arm64 "$PYTHON" "$SCRIPT"

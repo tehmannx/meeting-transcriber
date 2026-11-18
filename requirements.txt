@@ -1,0 +1,14 @@
+# Meeting Transcriber — Python dependencies
+#
+# Only one third-party package is imported directly by transcribe_app.py.
+# Everything else (http.server, cgi, json, tempfile, ...) is the standard library.
+#
+# Python: 3.9 – 3.12. The app uses the `cgi` module, which was removed in Python 3.13.
+# Known-good runtime: macOS Command Line Tools Python 3.9.6 (/usr/bin/python3), arm64.
+#
+# Install (same way as the original setup, into the user site-packages):
+#   /usr/bin/python3 -m pip install --user -r requirements.txt
+#
+# For an exact reproduction of the working environment use requirements-lock.txt.
+
+faster-whisper==1.2.1
